@@ -1,7 +1,11 @@
 import json
-from pprint import pprint
+import os
 
+import pytest
 
+pytestmark = pytest.mark.skipif(os.getenv("TRAVIS", False) is True, reason="tests for localhost only")
+
+@pytestmark
 def test_not_found_404(client):
     """Start with a blank database."""
 
@@ -9,13 +13,13 @@ def test_not_found_404(client):
     assert rv.status_code == 404
     assert b'404 Not Found' in rv.data
 
-
+@pytestmark
 def test_update_task(client):
     data = {
         'title': 'test_task_creation'
     }
 
-    rv = client.post('http://0.0.0.0:5000/api/v1/tasks', data=json.dumps(data))
+    rv = client.post('/api/v1/tasks', data=json.dumps(data))
     assert rv.status_code == 200
     created = json.loads(rv.data)
 
@@ -23,35 +27,35 @@ def test_update_task(client):
         'title': 'test_task_update_id_works',
     }
 
-    rv = client.post('http://0.0.0.0:5000/api/v1/tasks/%s' % str(created['id']), data=json.dumps(data))
+    rv = client.post('/api/v1/tasks/%s' % str(created['id']), data=json.dumps(data))
     assert rv.status_code == 200
     assert json.loads(rv.data)['title'] == data['title']
 
-
+@pytestmark
 def test_delete_non_existent(client):
     data = {
         'id': 'not_existent'
     }
-    rv = client.delete('http://0.0.0.0:5000/api/v1/tasks/%s' % str(data['id']))
+    rv = client.delete('/api/v1/tasks/%s' % str(data['id']))
     assert rv.status_code == 404
 
-
+@pytestmark
 def test_create_list_and_delete_task(client):
     data = {
         'title': 'test_task_creation'
     }
 
-    rv = client.post('http://0.0.0.0:5000/api/v1/tasks', data=json.dumps(data))
+    rv = client.post('/api/v1/tasks', data=json.dumps(data))
     assert rv.status_code == 200
     data = json.loads(rv.data)
 
-    rv = client.get('http://0.0.0.0:5000/api/v1/tasks')
+    rv = client.get('/api/v1/tasks')
     assert rv.status_code == 200
     assert data['id'] in json.loads(rv.data)['tasks']
 
-    rv = client.delete('http://0.0.0.0:5000/api/v1/tasks/%s' % str(data['id']))
+    rv = client.delete('/api/v1/tasks/%s' % str(data['id']))
     assert rv.status_code == 200
 
-    rv = client.get('http://0.0.0.0:5000/api/v1/tasks')
+    rv = client.get('/api/v1/tasks')
     assert rv.status_code == 200
     assert data['id'] not in json.loads(rv.data)['tasks']
