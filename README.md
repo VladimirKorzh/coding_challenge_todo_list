@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/VladimirKorzh/coding_challenge_todo_list.svg?branch=master)](https://travis-ci.org/VladimirKorzh/coding_challenge_todo_list)
 [![Known Vulnerabilities](https://snyk.io/test/github/dwyl/hapi-auth-jwt2/badge.svg?targetFile=package.json)](https://snyk.io/test/github/VladimirKorzh/coding_challenge_todo_list?targetFile=requirements.txt)
 [![HitCount](http://hits.dwyl.com/VladimirKorzh/coding_challenge_todo_list.svg)](http://hits.dwyl.com/VladimirKorzh/coding_challenge_todo_list)
 [![Maintainability](https://api.codeclimate.com/v1/badges/14f8e2ad273dfd4a3645/maintainability)](https://codeclimate.com/github/VladimirKorzh/coding_challenge_todo_list/maintainability)
