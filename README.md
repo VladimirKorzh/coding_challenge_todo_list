@@ -40,7 +40,8 @@ Clone the code over to your local machine
 Build and run the images
 `docker-compose up` 
 
-Navigate over to `http://0.0.0.0:5000/` and check out that 404
+Run the tests
+``` ./pytest ```
 
 # Running within local environment
 
