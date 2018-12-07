@@ -33,4 +33,4 @@ def create_app():
 if __name__ == '__main__':
     app = create_app()
     redis_init(app)
-    app.run()
+    app.run(host=app.config.get('FLASK_HOST'), port=app.config.get('FLASK_PORT'))

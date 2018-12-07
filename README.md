@@ -1,12 +1,16 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/dwyl/hapi-auth-jwt2/badge.svg?targetFile=package.json)](https://snyk.io/test/github/VladimirKorzh/coding_challenge_todo_list?targetFile=requirements.txt)
+[![HitCount](http://hits.dwyl.com/VladimirKorzh/coding_challenge_todo_list.svg)](http://hits.dwyl.com/VladimirKorzh/coding_challenge_todo_list)
+[![Maintainability](https://api.codeclimate.com/v1/badges/14f8e2ad273dfd4a3645/maintainability)](https://codeclimate.com/github/VladimirKorzh/coding_challenge_todo_list/maintainability)
+
 ---
-The story is that one of higher level executives came up to you and asked for a favor at 2pm on friday. 
+The story is that one of higher level executives came up to you and asked for a favor at 2pm on friday.
+![MEME](https://memeexplorer.com/cache/855.jpg) 
 ```
 Can you quickly mock up an api and spin it up on one of our servers? 
 I only have some general idea on what it should do, but we'll expand on it in the future. 
 If, you'd do it that'd be great =)
 ```
-![alt text](https://www.google.com.ua/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj-lP2WlY7fAhWhk4sKHZr_BkcQjRx6BAgBEAU&url=https%3A%2F%2Fmemeexplorer.com%2Finternet-memes%2Fthat-would-be-great%2Fyeah-if-you-could-go-ahead-and-wrap-this-meeting-up%2F957&psig=AOvVaw0UhUTMrjJwIpXiVGWIot0B&ust=1544287437007076) 
-
+![MEME](https://memeexplorer.com/cache/700.jpg) 
 ---
 
 # Initial API Requirements
@@ -27,6 +31,14 @@ If, you'd do it that'd be great =)
 - Data model is separated in `/src/model/todo_task.py` file
 - Tests are written using `PyTest` framework
 
+# Running using docker
+Clone the code over to your local machine
+`git clone`
+
+Build and run the images
+`docker-compose up` 
+
+Navigate over to `http://0.0.0.0:5000/` and check out that 404
 
 # Running within local environment
 
@@ -42,7 +54,23 @@ Install required modules in your virtual environment (don't forget to use one)
 Run the tests
 ``` ./pytest ```
 
-You could always run the server itself and perform manual testing from within Postman or a similar app.
+You could always run the server itself `run.py` and perform manual testing from within Postman or a similar app.
 I've included a Postman collection for testing the endpoints, simply import `avocode_todo_list.postman_collection.json`
 and you will instantly get all the necessary bindings. 
+
+# Some tips and tricks
+To delete all containers including its volumes use
+```docker rm -vf $(docker ps -a -q)```
+
+To delete all the images,
+```docker rmi -f $(docker images -a -q)```
+
+Remember, you should remove all the containers before removing all the images from which those containers were created.
+
+
+# Good luck
+
+![MEME](https://memeexplorer.com/cache/689.jpg) 
+
+
 

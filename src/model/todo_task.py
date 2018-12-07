@@ -25,7 +25,7 @@ class TodoTask:
     def load(id, storage):
         if storage.hexists(id, 'title'):
             values = storage.hgetall(id)
-            return TodoTask(**values, storage=storage)
+            return TodoTask(storage=storage, **values)
         else:
             raise Exception('Task with id: %s does not exist' % id)
 
