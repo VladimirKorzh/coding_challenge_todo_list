@@ -37,13 +37,13 @@ Clone the code over to your local machine
 ` git clone `
 
 Run a local instance of redis that would be used for storing the tasks 
-` docker run --name todoredis -p 6379:6379 -d redis:alpine `
+``` docker run --name todoredis -p 6379:6379 -d redis:alpine ```
 
 Install required modules in your virtual environment (don't forget to use one)
-` pip install -r requirements.txt`
+``` pip install -r requirements.txt```
 
 Run the tests
-` ./pytest `
+``` ./pytest ```
 
 You could always run the server itself and perform manual testing from within Postman or a similar app.
 I've included a Postman collection for testing the endpoints, simply import `avocode_todo_list.postman_collection.json`
