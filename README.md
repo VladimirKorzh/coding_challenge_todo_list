@@ -12,7 +12,6 @@ Can you quickly mock up an api and spin it up on one of our servers?
 I only have some general idea on what it should do, but we'll expand on it in the future. 
 If, you'd do it that'd be great =)
 ```
-![MEME](https://memeexplorer.com/cache/700.jpg) 
 ---
 
 # Initial API Requirements
@@ -32,6 +31,8 @@ If, you'd do it that'd be great =)
 - Postman collection can be found in `avocode_todo_list.postman_collection.json` file
 - Data model is separated in `/src/model/todo_task.py` file
 - Tests are written using `PyTest` framework
+
+![MEME](https://memeexplorer.com/cache/700.jpg) 
 
 # Running using docker
 Clone the code over to your local machine
