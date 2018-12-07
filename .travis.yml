@@ -8,6 +8,11 @@ services:
 # command to install dependencies
 install:
   - pip install -r requirements.txt
+  - pip install pytest pytest-cov
+
 # command to run tests
 script:
-  - pytest
+  - pytest --cov=./
+
+after_success:
+  - codecov --token="cb56cc89-6480-4d89-adad-9b4ba96353bf"
