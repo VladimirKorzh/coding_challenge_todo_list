@@ -2,7 +2,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/dwyl/hapi-auth-jwt2/badge.svg?targetFile=package.json)](https://snyk.io/test/github/VladimirKorzh/coding_challenge_todo_list?targetFile=requirements.txt)
 [![HitCount](http://hits.dwyl.com/VladimirKorzh/coding_challenge_todo_list.svg)](http://hits.dwyl.com/VladimirKorzh/coding_challenge_todo_list)
 [![Maintainability](https://api.codeclimate.com/v1/badges/14f8e2ad273dfd4a3645/maintainability)](https://codeclimate.com/github/VladimirKorzh/coding_challenge_todo_list/maintainability)
-[![codecov](https://codecov.io/gh/VladimirKorzh/coding_challenge_todo_list/branch/master/graph/badge.svg)](https://codecov.io/gh/VladimirKorzh/coding_challenge_todo_list)
+
 
 ---
 The story is that one of higher level executives came up to you and asked for a favor at 2pm on friday.
