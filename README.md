@@ -1,15 +1,12 @@
-
-Hi there! 
-This is a repository for a code challenge by Avocode company which I am applying to.
- 
 ---
 The story is that one of higher level executives came up to you and asked for a favor at 2pm on friday. 
 ```
 Can you quickly mock up an api and spin it up on one of our servers? 
 I only have some general idea on what it should do, but we'll expand on it in the future. 
 If, you'd do it that'd be great =)
-![alt text](https://www.google.com.ua/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj-lP2WlY7fAhWhk4sKHZr_BkcQjRx6BAgBEAU&url=https%3A%2F%2Fmemeexplorer.com%2Finternet-memes%2Fthat-would-be-great%2Fyeah-if-you-could-go-ahead-and-wrap-this-meeting-up%2F957&psig=AOvVaw0UhUTMrjJwIpXiVGWIot0B&ust=1544287437007076) 
 ```
+![alt text](https://www.google.com.ua/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj-lP2WlY7fAhWhk4sKHZr_BkcQjRx6BAgBEAU&url=https%3A%2F%2Fmemeexplorer.com%2Finternet-memes%2Fthat-would-be-great%2Fyeah-if-you-could-go-ahead-and-wrap-this-meeting-up%2F957&psig=AOvVaw0UhUTMrjJwIpXiVGWIot0B&ust=1544287437007076) 
+
 ---
 
 # Initial API Requirements
