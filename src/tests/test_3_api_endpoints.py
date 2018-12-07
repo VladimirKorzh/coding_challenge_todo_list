@@ -4,7 +4,6 @@ import os
 import pytest
 
 
-@pytest.mark.skipif(os.getenv("TRAVIS", False) is True, reason="tests for localhost only")
 def test_not_found_404(client):
     """Start with a blank database."""
 
@@ -13,7 +12,6 @@ def test_not_found_404(client):
     assert b'404 Not Found' in rv.data
 
 
-@pytest.mark.skipif(os.getenv("TRAVIS", False) is True, reason="tests for localhost only")
 def test_update_task(client):
     data = {
         'title': 'test_task_creation'
@@ -32,7 +30,6 @@ def test_update_task(client):
     assert json.loads(rv.data)['title'] == data['title']
 
 
-@pytest.mark.skipif(os.getenv("TRAVIS", False) is True, reason="tests for localhost only")
 def test_delete_non_existent(client):
     data = {
         'id': 'not_existent'
@@ -41,7 +38,6 @@ def test_delete_non_existent(client):
     assert rv.status_code == 404
 
 
-@pytest.mark.skipif(os.getenv("TRAVIS", False) is True, reason="tests for localhost only")
 def test_create_list_and_delete_task(client):
     data = {
         'title': 'test_task_creation'
