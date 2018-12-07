@@ -43,8 +43,12 @@ def list_tasks():
 
 
 @api.route('/tasks', methods=['POST'])
+def create_task():
+    return update_task(None)
+
+
 @api.route('/tasks/<id>', methods=['POST'])
-def update_task(id=None):
+def update_task(id):
     try:
         data = json.loads(request.data)
         task = TodoTask(storage=current_app.extensions['redis'], **data)
